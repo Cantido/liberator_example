@@ -7,6 +7,9 @@ defmodule LiberatorExampleWeb.Router do
 
   scope "/api", LiberatorExampleWeb do
     pipe_through :api
+
+    # You can use `Phoenix.Router.resources/4` with a Liberator resource.
+    resources "/posts", PostController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
