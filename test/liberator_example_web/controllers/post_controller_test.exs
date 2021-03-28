@@ -79,9 +79,9 @@ defmodule LiberatorExampleWeb.PostControllerTest do
       conn = delete(conn, Routes.post_path(conn, :delete, post))
       assert response(conn, 204)
 
-      assert_error_sent 404, fn ->
-        get(conn, Routes.post_path(conn, :show, post))
-      end
+
+      conn = get(conn, Routes.post_path(conn, :show, post))
+      assert response(conn, 404)
     end
   end
 

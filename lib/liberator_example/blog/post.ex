@@ -2,6 +2,8 @@ defmodule LiberatorExample.Blog.Post do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @derive {Jason.Encoder, only: [:id, :content, :title, :inserted_at, :updated_at]}
+
   schema "posts" do
     field :content, :string
     field :title, :string
