@@ -4,15 +4,37 @@ This library demonstrates how to use the [Liberator] library to create controlle
 
 [Liberator]: https://github.com/Cantido/liberator
 
-## Install
+Check out the file at `lib\liberator_example_web\controllers\post_controller.ex` for an example of a controller using Liberator to pass Phoenix's generated controller tests.
 
-Clone this library using Git.
+## How it was made
 
-## Usage
+This project was built using Phoenix generators.
+First, a new Phoenix project was created.
 
-This library is built as a standard Phoenix application, so use `mix phx.server` to start it.
+```sh
+mix phx.new liberator_example --no-webpack
+```
 
-There is no HTTP/webpack component of this library, since Liberator is best used for APIs.
+Then, in that project, we generated the `LiberatorExample.Blog` context, with a `LiberatorExample.Blog.Post` object.
+This generates a controller and an associated test module.
+
+```sh
+mix phx.gen.context Blog Post posts title:string content:string
+```
+
+We also added the associated `resources` directive to `LiberatorExampleWeb.Router`.
+
+```elixir
+scope "/api", LiberatorExampleWeb do
+  pipe_through :api
+
+  # You can use `Phoenix.Router.resources/4` with a Liberator resource.
+  resources "/posts", PostController, except: [:new, :edit]
+end
+```
+
+However, we then deleted the contents of `LiberatorExample.PostController` and replaced with a Liberator resource module.
+Just enough functionality was added to the resource module to make the existing controller tests pass.
 
 ## Contributing
 
@@ -25,7 +47,7 @@ Ideally, my answer to your question will be in an update to the docs.
 
 MIT License
 
-Copyright 2020 Rosa Richter
+Copyright 2021 Rosa Richter
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
