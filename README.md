@@ -4,7 +4,9 @@ This library demonstrates how to use the [Liberator] library to create controlle
 
 [Liberator]: https://github.com/Cantido/liberator
 
-Check out the file at `lib\liberator_example_web\controllers\post_controller.ex` for an example of a controller using Liberator to pass Phoenix's generated controller tests.
+Check out the file at
+[`lib\liberator_example_web\controllers\post_controller.ex`](https://github.com/Cantido/liberator_example/blob/main/lib/liberator_example_web/controllers/post_controller.ex)
+for an example of a controller using Liberator to pass Phoenix's generated controller tests.
 
 ## How it was made
 
