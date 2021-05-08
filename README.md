@@ -14,7 +14,7 @@ This project was built using Phoenix generators.
 First, a new Phoenix project was created.
 
 ```sh
-mix phx.new liberator_example --no-webpack
+mix phx.new liberator_example --no-webpack --no-html
 ```
 
 Then, in that project, we generated the `LiberatorExample.Blog` context, with a `LiberatorExample.Blog.Post` object.
