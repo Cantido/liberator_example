@@ -35,8 +35,11 @@ scope "/api", LiberatorExampleWeb do
 end
 ```
 
-However, we then deleted the contents of `LiberatorExample.PostController` and replaced with a Liberator resource module.
-Just enough functionality was added to the resource module to make the existing controller tests pass.
+However, we then deleted the contents of [`LiberatorExampleWeb.PostController`] and replaced with a Liberator resource module.
+Just enough functionality was added to the resource module to make [the existing controller tests] pass.
+
+[`LiberatorExampleWeb.PostController`]: https://github.com/Cantido/liberator_example/blob/main/lib/liberator_example_web/controllers/post_controller.ex
+[the existing controller tests]: https://github.com/Cantido/liberator_example/blob/main/test/liberator_example_web/controllers/post_controller_test.exs
 
 ## Contributing
 
