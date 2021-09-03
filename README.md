@@ -1,6 +1,6 @@
 # Liberator Example
 
-[![builds.sr.ht status](https://builds.sr.ht/~cosmicrose/liberator_example.svg)](https://builds.sr.ht/~cosmicrose/liberator?)
+[![builds.sr.ht status](https://builds.sr.ht/~cosmicrose/liberator_example.svg)](https://builds.sr.ht/~cosmicrose/liberator_example?)
 
 This library demonstrates how to use the [Liberator] library to create controllers that respect the HTTP specificiation.
 
