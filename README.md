@@ -1,11 +1,13 @@
 # Liberator Example
 
+[![builds.sr.ht status](https://builds.sr.ht/~cosmicrose/liberator_example.svg)](https://builds.sr.ht/~cosmicrose/liberator?)
+
 This library demonstrates how to use the [Liberator] library to create controllers that respect the HTTP specificiation.
 
-[Liberator]: https://github.com/Cantido/liberator
+[Liberator]: https://sr.ht/~cosmicrose/liberator
 
 Check out the file at
-[`lib\liberator_example_web\controllers\post_controller.ex`](https://github.com/Cantido/liberator_example/blob/main/lib/liberator_example_web/controllers/post_controller.ex)
+[`lib\liberator_example_web\controllers\post_controller.ex`](https://git.sr.ht/~cosmicrose/liberator_example/tree/main/item/lib/liberator_example_web/controllers/post_controller.ex)
 for an example of a controller using Liberator to pass Phoenix's generated controller tests.
 
 ## How it was made
@@ -38,14 +40,14 @@ end
 However, we then deleted the contents of [`LiberatorExampleWeb.PostController`] and replaced with a Liberator resource module.
 Just enough functionality was added to the resource module to make [the existing controller tests] pass.
 
-[`LiberatorExampleWeb.PostController`]: https://github.com/Cantido/liberator_example/blob/main/lib/liberator_example_web/controllers/post_controller.ex
-[the existing controller tests]: https://github.com/Cantido/liberator_example/blob/main/test/liberator_example_web/controllers/post_controller_test.exs
+[`LiberatorExampleWeb.PostController`]: https://git.sr.ht/~cosmicrose/liberator_example/tree/main/item/lib/liberator_example_web/controllers/post_controller.ex
+[the existing controller tests]: https://git.sr.ht/~cosmicrose/liberator_example/tree/main/item/test/liberator_example_web/controllers/post_controller_test.exs
 
 ## Contributing
 
 Questions and pull requests are more than welcome.
 I follow Elixir's tenet of bad documentation being a bug,
-so if anything is unclear, please [file an issue](https://github.com/Cantido/liberator_example/issues/new)!
+so if anything is unclear, please let me know in our [mailing list](https://lists.sr.ht/~cosmicrose/liberator)!
 Ideally, my answer to your question will be in an update to the docs.
 
 ## License
